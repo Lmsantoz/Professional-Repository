@@ -1,5 +1,5 @@
 
-# Documentação Técnica — Sistema para vincular produtos a corredores  
+# Documentação Técnica — GTINBridge  
 
 # Nota de segurança:
 Alguns trechos do projeto foram censurados ou adaptados para preservar dados sigilosos da empresa, como tokens de API, endereços IP internos e estruturas confidenciais de banco de dados.
