@@ -36,7 +36,7 @@ Integrando front-end, back-end, banco de dados e integração com API externa.
 
 ---
 
-## 🗂Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 Projeto-Fullstack/
