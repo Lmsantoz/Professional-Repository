@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="shortcut icon" href="assets/icons8-favicon-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/Tela-info.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Container principal da página -->
+    <div class="container">
+        <div class="caixa-resultado">
+            <!-- Bloco com os dados retornados da consulta -->
+            <div class="caixa-resultado-2">
+                <h2>Resultado da Consulta</h2>
+                <!-- Descrição do produto -->
+                <div class="Caixa-resultado-descricao">
+                    <label for="Produto">Descrição:</label>
+                    <pre id="Produto">item genérico</pre>
+                </div>
+                <!-- Código de barras -->
+                <div class="Caixa-resultado-gtin">
+                    <label for="Gtin">Código: </label>
+                    <pre id="Gtin">1111111</pre>
+                </div>
+                <!-- Subgrupo do produto -->
+                <div class="Caixa-resultado-Subgrupo">
+                    <label for="subGRUPO">item</label>
+                    <pre id="subGRUPO"></pre>
+                </div>
+            </div>
+            <!-- Seleção de corredor para cadastro -->
+            <div class="caixa-resultado-corredor">
+                <label for="produtos">Selecione um corredor:</label>
+                <select id="produtos" name="produtos">
+                    <option value="" selected disabled>Selecione...</option>
+                    <option value="1">Corredor 1 (Refrigerante)</option>
+                    <option value="2">Corredor 2 (cerveja)</option>
+                    <option value="3">Corredor 3 (perfumaria)</option>
+                    <option value="4">Corredor 4 (café)</option>
+                    <option value="5">Corredor 5 (chocolate)</option>
+                    <option value="6">Corredor 6 (maionese)</option>
+                    <option value="7">Corredor 7 (biscoito)</option>
+                    <option value="8">Corredor 8 (hortifrut)</option>
+                    <option value="9">Corredor 9 (limpeza)</option>
+                </select>
+            </div>
+            <!-- Botão para adicionar produto -->
+            <button class="botton" id="add" onclick="enviar()">Adicionar</button>
+            <!-- Link para retornar à página inicial -->
+            <a href="index.html">Voltar</a>
+        </div>
+    </div>
+    <script src="JS/tela-inicial.js"></script>
+    <script src="JS/tela-info.js"></script>
+</body>
+</html>

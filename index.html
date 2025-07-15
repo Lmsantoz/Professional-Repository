@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar</title>
+    <link rel="shortcut icon" href="assets/icons8-favicon-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/Tela-inicial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Container principal da página -->
+    <div class="container">
+        <div class="box-login">
+            <div class="box-login-campos">
+                <!-- Campo para digitar ou escanear o código de barras -->
+                <input id="GTIN" type="number" name="codigo" placeholder="Digite seu código de barras" required>
+                <!-- Botão para enviar o código (chama a função encaminhar()) -->
+                <button id="btnEnviar" class="botao1" onclick="encaminhar()">Enviar</button>
+                <!-- Logo do Supermercado Castanha -->
+                <img src="assets/ChatGPT Image Jul 15, 2025, 03_57_13 PM.png" alt="Logo genérica para exemplificar" width="70%"> 
+            </div>
+        </div>
+    </div>
+    <!-- Script que envia o código para a API -->
+    <script src="JS/conexao-api.js"></script>
+    <!-- Script que detecta digitação rápida de um leitor de código de barras e envia automaticamente -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.getElementById("GTIN");
+      const btn = document.getElementById("btnEnviar");
+      let buffer = "";
+      let timeout = null;
+      // Captura cada caractere digitado (inclusive por leitores físicos)
+      document.addEventListener("keydown", (e) => {
+        // Ignora teclas como shift, ctrl etc.
+        if (e.key.length === 1) {
+          buffer += e.key;
+        }
+        // Se o leitor enviar ENTER ao final do código
+        if (e.key === "Enter") {
+          if (buffer.length >= 8 && !isNaN(buffer)) {
+            input.value = buffer;
+            btn.click(); // Simula clique no botão "Enviar"
+          }
+          buffer = ""; // Limpa buffer após envio
+          return;
+        }
+        // Se passar 0.5s sem digitar limpa o buffer
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          buffer = "";
+        }, 500);
+      });
+    });
+    </script>
+</body>
+</html>

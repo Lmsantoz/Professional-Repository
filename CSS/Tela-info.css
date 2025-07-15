@@ -1,0 +1,105 @@
+
+@import url(index.css);
+
+body {
+    background-image: url(../assets/6\ -\ Editado.png); /* Caminho da imagem de fundo */
+    background-size: 100%;                              /* Redimensiona a imagem para cobrir horizontalmente */
+    background-repeat: no-repeat;                       /* Impede repetição da imagem */
+    background-position: center;                        /* Centraliza a imagem no body */
+}
+/* Container central que ocupa 90% da altura da viewport e centraliza o conteúdo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+/* Caixa principal de exibição dos resultados */
+.caixa-resultado {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px black;
+    border-radius: 10px;
+    background: linear-gradient(150deg, #5cafe6, #085181, #085181);
+    padding: 2dvh;              /* Unidade relativa à altura da tela */
+}
+/* Container interno com espaçamento vertical entre os itens */
+.caixa-resultado-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Linha de descrição do resultado */
+.caixa-resultado-descricao {
+    display: flex;
+    flex-direction: row;
+}
+/* Estilização do título */
+h2 {
+    font-size: 26px;
+    color: white;
+}
+/* Estilização dos rótulos (labels) */
+label {
+    color: white;
+    font-size: 18px;
+}
+/* Exibição do conteúdo formatado (ex: resultado do produto) */
+pre {
+    font-size: 16px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Estilização do menu suspenso (select de corredores) */
+select {
+    border-radius: 5px;
+    padding: 2px;
+}
+/* Agrupamento do campo de seleção do corredor */
+.caixa-resultado-corredor {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+/* Estilização de botão personalizado */
+.botton {
+    text-decoration: none;
+    background-color: rgb(121, 195, 255); 
+    padding: 2% 7%;                       
+    border-radius: 5px;
+    color: white;
+    border: none;
+    transition: 0.2s;
+    font-size: 16px;
+}
+/* Efeito de clique no botão */
+.botton:active {
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.562);
+}
+/* Estilo para links que se parecem com botões */
+a {
+    text-decoration: none;
+    background-color: rgb(121, 195, 255);
+    padding: 2% 10%;
+    border-radius: 5px;
+    color: white;
+    transition: 0.2s;
+    font-size: 16px;
+}
+/* Efeito ao clicar no link estilizado */
+a:active {
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.562);
+}
+/* Estilos responsivo para celular e tablet */
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url('../assets/6\ -\ Editado.png');
+    background-size: 1500px;        
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

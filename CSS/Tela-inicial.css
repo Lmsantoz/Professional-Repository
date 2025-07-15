@@ -1,0 +1,109 @@
+
+@import url(index.css);
+
+body {
+    background-image: url(../assets/6\ -\ Editado.png);
+}
+/* Container principal que centraliza o conteúdo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+/* Caixa visual do login com gradiente e bordas arredondadas */
+.box-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #5cafe6, #085181, #085181);
+    width: 45vh;
+    height: 30vh;
+    border-radius: 10px;
+    gap: 10px;
+}
+/* Agrupamento vertical dos campos e formulário */
+.box-login-campos,
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+/* Remove os botões de incremento/decremento do tipo number (em navegadores WebKit) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Estilização padrão dos inputs */
+input {
+    margin-top: 15px;
+    padding: 5% 2%;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+/* Comportamento ao passar o mouse sobre os inputs */
+input:hover {
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+/* Estilização do botão 1 */
+.botao1 {
+    text-align: center;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+    width: 10vh;
+    background-color: rgb(121, 195, 255);
+    color: white;
+    transition: background-color 0.2s;
+}
+/* Efeito hover do botão 1 */
+.botao1:hover {
+    background-color: rgb(86, 177, 252);
+}
+/* Efeito pressionado do botão 1 */
+.botao1:active {
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.616);
+    transition: box-shadow 0.1s;
+}
+/* Estilização da imagem */
+img {
+    margin-bottom: 2%;
+    width: 50%;
+}
+
+/* Estilização do botão 2 */
+.botao2 {
+    padding: 1.5%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(121, 195, 255);
+    color: white;
+    transition: background-color 0.2s;
+}
+
+/* Efeito hover do botão 2 */
+.botao2:hover {
+    background-color: rgb(86, 177, 252);
+}
+
+/* Efeito pressionado do botão 2 */
+.botao2:active {
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.616);
+    transition: box-shadow 0.1s;
+}
+
+/* Ajustes para telas grandes (mínimo 1400px de largura) */
+@media (min-width: 1400px) {
+    body {
+        background-image: url(../assets/6\ -\ Editado.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+}
